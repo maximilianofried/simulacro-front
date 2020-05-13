@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Nav from './nav'
 
-const Layout = ({ children, categories }) => (
+const Layout = ({ children, categories, article }) => (
   <>
     <Head>
       <title>Strapi blog</title>
@@ -18,7 +18,27 @@ const Layout = ({ children, categories }) => (
       <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.js" />
     </Head>
     <Nav categories={categories} />
-    {children}
+    {article ? (
+      <>
+        <div
+          id="banner"
+          className="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light uk-padding uk-margin"
+          data-src={article.image.url}
+          data-srcset={article.image.url}
+          data-uk-img
+        >
+          <h1>{article.title}</h1>
+        </div>
+
+        <div className="uk-section">
+          <div className="uk-container uk-container-small">{children}</div>
+        </div>
+      </>
+    ) : (
+      <div className="uk-section">
+        <div className="uk-container uk-container-large">{children}</div>
+      </div>
+    )}
   </>
 )
 

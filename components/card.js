@@ -2,16 +2,13 @@ import React from 'react'
 import Link from 'next/link'
 
 const Card = ({ article }) => {
-  const imageUrl = article.image.url.startsWith('/')
-    ? process.env.API_URL + article.image.url
-    : article.image.url
   return (
     <Link as={`/article/${article.id}`} href="/article/[id]">
       <a className="uk-link-reset">
         <div className="uk-card uk-card-muted">
           <div className="uk-card-media-top">
             <img
-              src={imageUrl}
+              src={article.image.url}
               alt={article.image.alternativeText}
               height="100"
             />
