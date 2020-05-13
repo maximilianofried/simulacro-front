@@ -12,11 +12,6 @@ const Nav = ({ categories }) => {
                 <a>Strapi Blog</a>
               </Link>
             </li>
-            <li>
-              <Link href="/about">
-                <a>About</a>
-              </Link>
-            </li>
           </ul>
         </div>
 
