@@ -7,7 +7,6 @@ export async function getStaticProps({ params }) {
   const categories = (await getCategories()) || []
   return {
     props: { category, categories },
-    unstable_revalidate: 1,
   }
 }
 
