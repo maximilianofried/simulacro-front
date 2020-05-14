@@ -3,8 +3,8 @@ import { getCategory, getCategories } from '../../lib/api'
 import Layout from '../../components/layout'
 
 export async function getStaticProps({ params }) {
-  const category = (await getCategory(params.id)) || []
-  const categories = (await getCategories()) || []
+  const category = await getCategory(params.id)
+  const categories = await getCategories()
   return {
     props: { category, categories },
   }
@@ -20,7 +20,7 @@ export default function Category({ category, categories }) {
 }
 
 export async function getStaticPaths() {
-  const categories = (await getCategories()) || []
+  const categories = await getCategories()
   return {
     paths: categories.map(category => `/category/${category.id}`),
     fallback: false,

@@ -4,8 +4,8 @@ import { getArticles, getArticle, getCategories } from '../../lib/api'
 import Layout from '../../components/layout'
 
 export async function getStaticProps({ params }) {
-  const article = (await getArticle(params.id)) || []
-  const categories = (await getCategories()) || []
+  const article = await getArticle(params.id)
+  const categories = await getCategories()
   return {
     props: { article, categories },
   }
@@ -23,7 +23,7 @@ export default function Article({ article, categories }) {
 }
 
 export async function getStaticPaths() {
-  const articles = (await getArticles()) || []
+  const articles = await getArticles()
   return {
     paths: articles.map(article => `/article/${article.id}`),
     fallback: false,

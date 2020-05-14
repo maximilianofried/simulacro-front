@@ -4,8 +4,8 @@ import Layout from '../components/layout'
 import { getArticles, getCategories } from '../lib/api'
 
 export async function getStaticProps() {
-  const articles = (await getArticles()) || []
-  const categories = (await getCategories()) || []
+  const articles = await getArticles()
+  const categories = await getCategories()
   return {
     props: { articles, categories },
   }
