@@ -36,6 +36,6 @@ npm run dev
 
 First, import this project into [Vercel](http://vercel.com/) using the Git integration.
 
-Then, set `API_URL` to your Heroku app’s URL from your project’s environment variables settings ([documentation](https://vercel.com/docs/v2/build-step#environment-variables)):
+Then, set `API_URL` to your Heroku app’s URL from your project’s environment variables settings ([documentation](https://vercel.com/docs/v2/build-step#environment-variables)).
 
 **Note** Your `API_URL` cannot contain a trailing slash.
