@@ -1,0 +1,22 @@
+.footer {
+  color: red;
+}
+
+.footer_right {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.footer_box {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.footer_box > li > a {
+
+}
+

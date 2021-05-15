@@ -1,0 +1,48 @@
+.main_layout {
+  background-color: #212121;
+  height: 100vh;
+  width: 100%;
+  background-image: url(../images/grid_group.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  color: white;
+  font-family: Hack;
+  font-size: 1.1rem;
+
+  a {
+    text-decoration: none;
+    color: white !important;
+  }
+}
+
+.no_margin {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.no_padding {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.right_col {
+  right: 0;
+  width: fit-content;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.main_title {
+  width: fit-content;
+}
+
+.menu {
+  //width: fit-content;
+  justify-content: flex-end;
+}

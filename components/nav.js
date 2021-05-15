@@ -5,19 +5,14 @@ const Nav = ({ categories }) => {
   return (
     <div>
       <nav className="uk-navbar-container" data-uk-navbar>
-        <div className="uk-navbar-left">
+        <div className="uk-navbar-right">
           <ul className="uk-navbar-nav">
             <li>
               <Link href="/">
-                <a>Strapi Blog</a>
+                <a className="uk-link-reset">simulacro</a>
               </Link>
             </li>
-          </ul>
-        </div>
-
-        <div className="uk-navbar-right">
-          <ul className="uk-navbar-nav">
-            {categories.map(category => {
+            {/* {categories.map(category => {
               return (
                 <li key={category.id}>
                   <Link as={`/category/${category.id}`} href="/category/[id]">
@@ -25,7 +20,7 @@ const Nav = ({ categories }) => {
                   </Link>
                 </li>
               )
-            })}
+            })} */}
           </ul>
         </div>
       </nav>
