@@ -5,10 +5,11 @@
   background-image: url(../images/grid_group.svg);
   background-repeat: no-repeat;
   background-position: bottom;
+  position: fixed;
   color: white;
   font-family: Hack;
-  font-size: 1.1rem;
-
+  font-size: 0.9rem;
+  background-size: 100%;
   a {
     text-decoration: none;
     color: white !important;
@@ -26,8 +27,11 @@
 }
 
 .right_col {
-  right: 0;
-  width: fit-content;
+  //   width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .list {
@@ -35,14 +39,24 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: flex-end;
+  align-items: flex-end;
+  //   justify-content: flex-end;
 }
 
 .main_title {
   width: fit-content;
+  align-items: flex-end;
 }
 
 .menu {
   //width: fit-content;
-  justify-content: flex-end;
+  //   justify-content: flex-end;
+}
+
+.height_100_vh {
+  height: 100vh;
+}
+
+.height_100_percent {
+  height: 100%;
 }

@@ -1,22 +1,17 @@
 import React from 'react'
 import Articles from '../components/articles'
 import Layout from '../components/layout'
-import { getArticles, getCategories } from '../lib/api'
+import { getCollaborators, getProjects } from '../lib/api'
 
 export async function getStaticProps() {
-  const articles = await getArticles()
-  const categories = await getCategories()
+  const collaborators = await getCollaborators()
+  const projects = await getProjects()
   return {
-    props: { articles, categories },
-    unstable_revalidate: 1,
+    props: { collaborators, projects },
+    revalidate: 1,
   }
 }
 
-export default function Home({ articles, categories }) {
-  return (
-    <Layout categories={categories}>
-      <h1>Strapi blog</h1>
-      <Articles articles={articles} />
-    </Layout>
-  )
+export default function Home({ collaborators, projects }) {
+  return <Layout collaborators={collaborators} projects={projects} />
 }
