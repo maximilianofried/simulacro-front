@@ -6,7 +6,6 @@ export async function getStaticProps({ params }) {
   const project = await getProject(params.slug)
   const projects = await getProjects()
   const collaborators = await getCollaborators()
-  console.log(project)
   return {
     props: { project, projects, collaborators },
     revalidate: 1,

@@ -5,7 +5,6 @@ import Layout from '../../components/layout'
 import Terminal from '../../components/terminal'
 
 export async function getStaticProps({ params }) {
-  console.log(params.slug)
   const collaborator = await getCollaborator(params.slug)
   const collaborators = await getCollaborators()
   const projects = await getProjects()

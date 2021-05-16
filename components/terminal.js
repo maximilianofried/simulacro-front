@@ -23,7 +23,7 @@ const Terminal = ({ content, type, id }) => {
                 return (
                   <Link
                     href={`${
-                      process.env.API_URL || 'http://localhost:3000'
+                      process.env.FRONT_URL || 'http://localhost:3000'
                     }/${id}/${item.slug}`}
                   >
                     <a>
