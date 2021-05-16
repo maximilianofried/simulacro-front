@@ -1,3 +1,17 @@
+.html {
+  overscroll-behavior: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera  */
+.hide_scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.hide_scrollbar {
+  -ms-overflow-style: none;
+}
+
 .main_layout {
   background-color: #212121;
   height: 100vh;
@@ -28,6 +42,7 @@
 
 .right_col {
   //   width: fit-content;
+  z-index: 99999;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -53,10 +68,72 @@
   //   justify-content: flex-end;
 }
 
-.height_100_vh {
+.main_row {
   height: 100vh;
+  justify-content: space-between;
 }
 
 .height_100_percent {
   height: 100%;
+}
+
+.rowoverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+}
+
+.position_relative {
+  position: relative;
+}
+
+//////@at-root
+
+.first_row {
+  align-items: flex-start;
+  height: 10vh;
+
+  // white-space: nowrap;
+  // height: fit-content;
+  line-height: normal;
+  padding-top: 35px;
+  // flex-wrap: nowrap;
+}
+
+.r1_first_column {
+  // overflow-y: scroll;
+}
+
+.r2_first_column {
+  padding-right: 10vw;
+}
+
+.second_row {
+  overflow-x: auto;
+  white-space: nowrap;
+  height: fit-content;
+  line-height: normal;
+  flex-wrap: nowrap;
+  z-index: 1;
+}
+
+.third_row {
+  // align-content: space-between !important;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+
+.title_simulacro {
+  text-align: end;
+}
+
+.scroll_box {
+  height: 55vh;
+  overflow-y: scroll;
+  padding-bottom: 80vh;
 }

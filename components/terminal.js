@@ -1,11 +1,40 @@
 import React from 'react'
 import Link from 'next/link'
 
-const Terminal = ({ content }) => {
+const replaceContent = content => {
+  let newContent = content.replace(/href/g, "target='_blank' href")
+  return newContent
+}
+
+const Terminal = ({ content, type, id }) => {
   return (
     <>
-      {content ? (
-        content
+      {content && type === 'info' ? (
+        <div
+          dangerouslySetInnerHTML={{
+            __html: replaceContent(content ? content : ''),
+          }}
+        />
+      ) : content && type === 'list' ? (
+        <>
+          {
+            <ul>
+              {content.map(item => {
+                return (
+                  <Link
+                    href={`${
+                      process.env.API_URL || 'http://localhost:3000'
+                    }/${id}/${item.slug}`}
+                  >
+                    <a>
+                      <li key={item.id}>{item.name}</li>
+                    </a>
+                  </Link>
+                )
+              })}
+            </ul>
+          }
+        </>
       ) : (
         <>
           {' '}

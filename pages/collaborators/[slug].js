@@ -23,8 +23,9 @@ export default function Collaborators({
   return (
     <Layout
       collaborators={collaborators}
-      content={collaborator.link}
+      content={collaborator.content}
       projects={projects}
+      type="info"
     ></Layout>
     //   <p>
     //   <Moment format="MMM Do YYYY">{article.published_at}</Moment>

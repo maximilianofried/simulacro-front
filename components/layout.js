@@ -1,9 +1,18 @@
 import Head from 'next/head'
 import Terminal from './terminal'
 import Link from 'next/link'
+import ImagesLayout from './imagesLayout'
 import LayoutStyles from '../assets/scss/Layout.module.scss'
 
-const Layout = ({ children, collaborators, content, projects }) => {
+const Layout = ({
+  children,
+  collaborators,
+  content,
+  projects,
+  type,
+  id,
+  images,
+}) => {
   return (
     <>
       <Head>
@@ -13,13 +22,74 @@ const Layout = ({ children, collaborators, content, projects }) => {
           href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css"
         ></link>
       </Head>
+
       <div className={LayoutStyles.main_layout}>
         <div
           className={`container-fluid ${LayoutStyles.no_margin} ${LayoutStyles.height_100_percent}`}
         >
-          <div className={`row ${LayoutStyles.height_100_vh}`}>
+          <div className={`row ${LayoutStyles.main_row}`}>
+            <div
+              className={`row ${LayoutStyles.first_row} ${LayoutStyles.no_margin} `}
+            >
+              <div
+                className={`col-12 col-xl-6 ${LayoutStyles.r1_first_column}`}
+              >
+                <div
+                  className={`${LayoutStyles.scroll_box} ${LayoutStyles.hide_scrollbar}`}
+                >
+                  <Terminal content={content} type={type} id={id} />
+                </div>
+              </div>
+              <div
+                className={`col-12 col-xl-6 ${LayoutStyles.title_simulacro} ${LayoutStyles.no_padding}`}
+              >
+                <Link href="/">
+                  <a
+                    className={`${LayoutStyles.no_padding} ${LayoutStyles.main_title}`}
+                  >
+                    Simulacro
+                  </a>
+                </Link>
+              </div>
+            </div>
+            <div
+              className={`row ${LayoutStyles.second_row} ${LayoutStyles.no_margin} ${LayoutStyles.no_padding} ${LayoutStyles.hide_scrollbar}`}
+            >
+              {images && <ImagesLayout images={images} />}
+            </div>
+            <div
+              className={`row ${LayoutStyles.third_row} ${LayoutStyles.no_margin} ${LayoutStyles.no_padding} `}
+            >
+              <div className="col-12 col-xl-12">
+                <ul
+                  className={`align-self-baseline ${LayoutStyles.list} ${LayoutStyles.no_padding}`}
+                >
+                  <li>
+                    {' '}
+                    <Link href="/projects">
+                      <a
+                        className={`${LayoutStyles.no_padding} ${LayoutStyles.main_title}`}
+                      >
+                        Projects
+                      </a>
+                    </Link>
+                  </li>
+                  <Link href="/collaborators">
+                    <a
+                      className={`${LayoutStyles.no_padding} ${LayoutStyles.main_title}`}
+                    >
+                      Collaborators
+                    </a>
+                  </Link>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* <div className={`row ${LayoutStyles.height_100_vh}`}>
             <div className="col-12 col-xl-6">
-              <Terminal content={content} />
+              <Terminal content={content} type={type} id={id} />
+              <ImagesLayout images={images} />
             </div>
             <div className={`col-12 col-xl-6 ${LayoutStyles.right_col}`}>
               <div className="">
@@ -35,34 +105,28 @@ const Layout = ({ children, collaborators, content, projects }) => {
                 <ul
                   className={`align-self-baseline ${LayoutStyles.list} ${LayoutStyles.no_padding}`}
                 >
-                  {projects &&
-                    projects.map(project => (
-                      <li key={project.id}>
-                        <Link
-                          href={`/projects/${project.slug}`}
-                          key={project.id}
-                        >
-                          {project.title}
-                        </Link>
-                      </li>
-                    ))}
-                  <li>Projects</li>
-                  {collaborators &&
-                    collaborators.map(collab => (
-                      <li key={collab.id}>
-                        <Link
-                          href={`/collaborators/${collab.slug}`}
-                          key={collab.id}
-                        >
-                          {collab.name}
-                        </Link>
-                      </li>
-                    ))}
-                  <li>Collaborators</li>
+
+                  <li>
+                    {' '}
+                    <Link href="/projects">
+                      <a
+                        className={`${LayoutStyles.no_padding} ${LayoutStyles.main_title}`}
+                      >
+                        Projects
+                      </a>
+                    </Link>
+                  </li>
+                  <Link href="/collaborators">
+                    <a
+                      className={`${LayoutStyles.no_padding} ${LayoutStyles.main_title}`}
+                    >
+                      Collaborators
+                    </a>
+                  </Link>
                 </ul>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>
