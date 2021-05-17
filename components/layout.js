@@ -12,6 +12,7 @@ const Layout = ({
   type,
   id,
   images,
+  contentCollabs,
 }) => {
   return (
     <>
@@ -37,18 +38,22 @@ const Layout = ({
                 <div
                   className={`${LayoutStyles.scroll_box} ${LayoutStyles.hide_scrollbar}`}
                 >
-                  <Terminal content={content} type={type} id={id} />
+                  <Terminal
+                    content={content}
+                    contentCollabs={contentCollabs}
+                    type={type}
+                    id={id}
+                  />
                 </div>
               </div>
               <div
                 className={`col-12 col-xl-6 ${LayoutStyles.title_simulacro} ${LayoutStyles.no_padding}`}
               >
-                <Link href="/">
-                  <a
-                    className={`${LayoutStyles.no_padding} ${LayoutStyles.main_title}`}
-                  >
-                    Simulacro
-                  </a>
+                <Link
+                  href="/"
+                  className={`${LayoutStyles.no_padding} ${LayoutStyles.main_title}`}
+                >
+                  Simulacro
                 </Link>
               </div>
             </div>

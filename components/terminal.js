@@ -6,26 +6,30 @@ const replaceContent = content => {
   return newContent
 }
 
-const Terminal = ({ content, type, id }) => {
+const Terminal = ({ content, contentCollabs, type, id }) => {
   return (
     <>
       {content && type === 'info' ? (
-        <div
-          dangerouslySetInnerHTML={{
-            __html: replaceContent(content ? content : ''),
-          }}
-        />
+        <>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: replaceContent(content ? content : ''),
+            }}
+          />
+          <ul>
+            {contentCollabs &&
+              contentCollabs.map(collab => {
+                return <li>{collab.name}</li>
+              })}
+          </ul>
+        </>
       ) : content && type === 'list' ? (
         <>
           {
             <ul>
               {content.map(item => {
                 return (
-                  <Link
-                    href={`${
-                      process.env.FRONT_URL || 'http://localhost:3000'
-                    }/${id}/${item.slug}`}
-                  >
+                  <Link href={`/${id}/${item.slug}`}>
                     <a>
                       <li key={item.id}>{item.name}</li>
                     </a>
