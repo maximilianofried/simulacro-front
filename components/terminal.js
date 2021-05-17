@@ -1,16 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
-import Content from '../assets/scss/Content.module.scss'
 
 const replaceContent = content => {
-  let newContent = content.replace(
-    /href/g,
-    "className='" + Content.text_decoration + " ' target='_blank' href"
-  )
+  let newContent = content.replace(/href/g, "target='_blank' href")
+  newContent = newContent.replace()
   return newContent
 }
 
-const Terminal = ({ content, contentCollabs, type, id }) => {
+const Terminal = ({ content, contentList, type, id }) => {
+  console.log('--->', contentList)
   return (
     <>
       {content && type === 'info' ? (
@@ -21,9 +19,16 @@ const Terminal = ({ content, contentCollabs, type, id }) => {
             }}
           />
           <ul>
-            {contentCollabs &&
-              contentCollabs.map(collab => {
-                return <li key={collab.id}>{collab.name}</li>
+            {contentList &&
+              contentList.map(item => {
+                return (
+                  <li key={item.id}>
+                    {' '}
+                    <Link href={`/${id}/${item.slug}`}>
+                      <a>{item.name}</a>
+                    </Link>
+                  </li>
+                )
               })}
           </ul>
         </>
@@ -33,11 +38,11 @@ const Terminal = ({ content, contentCollabs, type, id }) => {
             <ul>
               {content.map(item => {
                 return (
-                  <Link href={`/${id}/${item.slug}`}>
-                    <a>
-                      <li key={item.id}>{item.name}</li>
-                    </a>
-                  </Link>
+                  <li key={item.id}>
+                    <Link href={`/${id}/${item.slug}`}>
+                      <a>{item.name}</a>
+                    </Link>
+                  </li>
                 )
               })}
             </ul>

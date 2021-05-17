@@ -1,8 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
 import Images from '../assets/scss/Images.module.scss'
+import ReactPlayer from 'react-player'
 
-const ImagesLayout = ({ images }) => {
+const ImagesLayout = ({ images, youtubeLinks }) => {
+  const divStyle = {
+    color: 'blue',
+  }
+
   return (
     <>
       <div className={`row ${Images.images_row}`}>
@@ -17,15 +22,32 @@ const ImagesLayout = ({ images }) => {
               ></img>
             )
           })}
-          <iframe
-            className={`${Images.iframe_container} ${Images.image_padding}`}
+          {/* <ReactPlayer
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/2L4d7ZG6ze8"
+            style={divStyle}
+            className={`${Images.iframe_container} ${Images.image_padding}`}
+            url="https://www.youtube.com/embed/2L4d7ZG6ze8"
+            id="iframe"
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-          ></iframe>
+          /> */}
+          {youtubeLinks &&
+            youtubeLinks.map(youtubeLink => {
+              return (
+                <iframe
+                  key="youtubeLink.url"
+                  width="100%"
+                  height="100%"
+                  className={`${Images.iframe_container} ${Images.image_padding}`}
+                  src={youtubeLink.url}
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              )
+            })}
         </div>
       </div>
     </>

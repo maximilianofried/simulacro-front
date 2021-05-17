@@ -17,8 +17,9 @@ export default function Projects({ project, projects, collaborators }) {
     <Layout
       projects={projects}
       content={project.content}
-      contentCollabs={project.collaborators}
+      contentList={project.collaborators}
       images={project.images}
+      youtubeLinks={project.links}
       collaborators={collaborators}
       type="info"
     ></Layout>

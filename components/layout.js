@@ -12,7 +12,8 @@ const Layout = ({
   type,
   id,
   images,
-  contentCollabs,
+  contentList,
+  youtubeLinks,
 }) => {
   return (
     <>
@@ -40,7 +41,7 @@ const Layout = ({
                 >
                   <Terminal
                     content={content}
-                    contentCollabs={contentCollabs}
+                    contentList={contentList}
                     type={type}
                     id={id}
                   />
@@ -52,7 +53,9 @@ const Layout = ({
                 <ul
                   className={`align-self-baseline ${LayoutStyles.list} ${LayoutStyles.no_padding}`}
                 >
-                  <li className={`${LayoutStyles.padding_5vh}`}>
+                  <li
+                    className={`${LayoutStyles.padding_5vh} ${LayoutStyles.no_bullet}`}
+                  >
                     <Link
                       href="/"
                       className={`${LayoutStyles.no_padding} ${LayoutStyles.main_title}`}
@@ -64,24 +67,30 @@ const Layout = ({
                       </div>
                     </Link>
                   </li>
-                  <li className={`${LayoutStyles.padding_2vh}`}>
+                  <li
+                    className={`${LayoutStyles.padding_2vh} ${LayoutStyles.no_bullet}`}
+                  >
                     {' '}
                     <Link href="/projects">
                       <a className={` ${LayoutStyles.main_title}`}>Projects</a>
                     </Link>
                   </li>
-                  <Link href="/collaborators">
-                    <a className={`${LayoutStyles.main_title}`}>
-                      Collaborators
-                    </a>
-                  </Link>
+                  <li className={`${LayoutStyles.no_bullet}`}>
+                    <Link href="/collaborators">
+                      <a className={`${LayoutStyles.main_title}`}>
+                        Collaborators
+                      </a>
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>
             <div
               className={`row ${LayoutStyles.second_row} ${LayoutStyles.no_margin} ${LayoutStyles.no_padding} ${LayoutStyles.hide_scrollbar}`}
             >
-              {images && <ImagesLayout images={images} />}
+              {images && (
+                <ImagesLayout images={images} youtubeLinks={youtubeLinks} />
+              )}
             </div>
             {/* <div
               className={`row ${LayoutStyles.third_row} ${LayoutStyles.no_margin} ${LayoutStyles.no_padding} `}
