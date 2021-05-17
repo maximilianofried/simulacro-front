@@ -19,7 +19,7 @@ const Terminal = ({ content, contentCollabs, type, id }) => {
           <ul>
             {contentCollabs &&
               contentCollabs.map(collab => {
-                return <li>{collab.name}</li>
+                return <li key={collab.id}>{collab.name}</li>
               })}
           </ul>
         </>
