@@ -60,7 +60,7 @@ const Layout = ({
                       <div
                         className={`${LayoutStyles.main_title} ${LayoutStyles.font_title}`}
                       >
-                        Simulacro
+                        <a>Simulacro</a>
                       </div>
                     </Link>
                   </li>

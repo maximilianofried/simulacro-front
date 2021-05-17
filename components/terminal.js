@@ -1,8 +1,12 @@
 import React from 'react'
 import Link from 'next/link'
+import Content from '../assets/scss/Content.module.scss'
 
 const replaceContent = content => {
-  let newContent = content.replace(/href/g, "target='_blank' href")
+  let newContent = content.replace(
+    /href/g,
+    "className='" + Content.text_decoration + " ' target='_blank' href"
+  )
   return newContent
 }
 
