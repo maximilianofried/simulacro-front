@@ -23,8 +23,10 @@ export default function Collaborators({
     <Layout
       collaborators={collaborators}
       content={collaborator.content}
+      contentList={collaborator.projects}
       projects={projects}
       type="info"
+      id="projects"
     ></Layout>
     //   <p>
     //   <Moment format="MMM Do YYYY">{article.published_at}</Moment>

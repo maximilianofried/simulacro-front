@@ -21,6 +21,7 @@ export default function Projects({ project, projects, collaborators }) {
       images={project.images}
       youtubeLinks={project.links}
       collaborators={collaborators}
+      id="collaborators"
       type="info"
     ></Layout>
   )
