@@ -6,7 +6,7 @@ const ImagesLayout = ({ images }) => {
   return (
     <>
       <div className={`row ${Images.images_row}`}>
-        <div className="col-xl-6 col-md-8 col-sm-12 col-12 ">
+        <div className="col-xl-12 col-md-8 col-sm-12 col-12 ">
           {images.map(image => {
             let url = image.formats.medium.url
             return (
@@ -17,6 +17,15 @@ const ImagesLayout = ({ images }) => {
               ></img>
             )
           })}
+          <iframe
+            className={`${Images.iframe_container} ${Images.image_padding}`}
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/2L4d7ZG6ze8"
+            frameBorder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
       </div>
     </>
