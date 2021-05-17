@@ -120,7 +120,6 @@
   height: fit-content;
   line-height: normal;
   flex-wrap: nowrap;
-  z-index: 1;
 }
 
 .third_row {
@@ -132,12 +131,13 @@
 
 .title_simulacro {
   text-align: end;
+  z-index: 9;
 }
 
 .scroll_box {
-  height: 70vh;
+  height: 50vh;
   overflow-y: scroll;
-  padding-bottom: 50vh;
+  margin-bottom: 16vh;
 }
 
 .padding_5vh {
