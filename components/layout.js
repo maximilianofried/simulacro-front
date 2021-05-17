@@ -49,12 +49,31 @@ const Layout = ({
               <div
                 className={`col-12 col-xl-6 ${LayoutStyles.title_simulacro} ${LayoutStyles.no_padding}`}
               >
-                <Link
-                  href="/"
-                  className={`${LayoutStyles.no_padding} ${LayoutStyles.main_title}`}
+                <ul
+                  className={`align-self-baseline ${LayoutStyles.list} ${LayoutStyles.no_padding}`}
                 >
-                  Simulacro
-                </Link>
+                  <li className={`${LayoutStyles.padding_5vh}`}>
+                    <Link
+                      href="/"
+                      className={`${LayoutStyles.no_padding} ${LayoutStyles.main_title}`}
+                    >
+                      <div className={`${LayoutStyles.main_title}`}>
+                        Simulacro
+                      </div>
+                    </Link>
+                  </li>
+                  <li className={`${LayoutStyles.padding_2vh}`}>
+                    {' '}
+                    <Link href="/projects">
+                      <a className={` ${LayoutStyles.main_title}`}>Projects</a>
+                    </Link>
+                  </li>
+                  <Link href="/collaborators">
+                    <a className={`${LayoutStyles.main_title}`}>
+                      Collaborators
+                    </a>
+                  </Link>
+                </ul>
               </div>
             </div>
             <div
@@ -62,7 +81,7 @@ const Layout = ({
             >
               {images && <ImagesLayout images={images} />}
             </div>
-            <div
+            {/* <div
               className={`row ${LayoutStyles.third_row} ${LayoutStyles.no_margin} ${LayoutStyles.no_padding} `}
             >
               <div className="col-12 col-xl-12">
@@ -88,7 +107,7 @@ const Layout = ({
                   </Link>
                 </ul>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* <div className={`row ${LayoutStyles.height_100_vh}`}>
