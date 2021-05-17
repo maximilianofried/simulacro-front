@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import ContentLayout from '../assets/scss/Content.module.scss'
 
 const replaceContent = content => {
   let newContent = content.replace(/href/g, "target='_blank' href")
@@ -69,7 +70,7 @@ const Terminal = ({ content, contentList, type, id }) => {
             Database Connected! event - compiled successfully {'>'} Ready on
             port 3000
           </p>
-          <p>
+          <p className={`${ContentLayout.simulacro_description}`}>
             Simulacro Studio is a transdisciplinary studio based between Berlin
             (DE) and Córdoba (AR) that delivers multisensorial storytelling
             through multidisciplinary collaborations blending tech art, visual,
