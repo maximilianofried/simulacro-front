@@ -24,13 +24,13 @@ const Terminal = ({ content, contentList, type, id }) => {
               contentList.map(item => {
                 return (
                   <li key={item.id}>
-                    {' '}
-                    <Link href={`/${id}/${item.slug}`}>
-                      <>
-                        {'> '}
+                    <>
+                      {' '}
+                      {'> '}
+                      <Link href={`/${id}/${item.slug}`}>
                         <a>{item.name}</a>
-                      </>
-                    </Link>
+                      </Link>
+                    </>
                   </li>
                 )
               })}
@@ -43,12 +43,12 @@ const Terminal = ({ content, contentList, type, id }) => {
               {content.map(item => {
                 return (
                   <li key={item.id}>
-                    <Link href={`/${id}/${item.slug}`}>
-                      <>
-                        {'> '}
+                    <>
+                      {'> '}{' '}
+                      <Link href={`/${id}/${item.slug}`}>
                         <a>{item.name}</a>
-                      </>
-                    </Link>
+                      </Link>
+                    </>
                   </li>
                 )
               })}

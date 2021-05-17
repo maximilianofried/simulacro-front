@@ -4,6 +4,12 @@ import Link from 'next/link'
 import ImagesLayout from './imagesLayout'
 import LayoutStyles from '../assets/scss/Layout.module.scss'
 
+const getRandomIntInclusive = (min, max) => {
+  min = Math.ceil(min)
+  max = Math.floor(max)
+  return Math.floor(Math.random() * (max - min + 1) + min) //The maximum is inclusive and the minimum is inclusive
+}
+
 const Layout = ({
   children,
   collaborators,
@@ -15,6 +21,7 @@ const Layout = ({
   contentList,
   youtubeLinks,
 }) => {
+  let randomNumber = getRandomIntInclusive(0, 8)
   return (
     <>
       <Head>
@@ -25,7 +32,29 @@ const Layout = ({
         ></link>
       </Head>
 
-      <div className={LayoutStyles.main_layout}>
+      <div
+        className={`${LayoutStyles.main_layout} ${
+          randomNumber === 0
+            ? LayoutStyles.color_style_0
+            : randomNumber === 1
+            ? LayoutStyles.color_style_1
+            : randomNumber === 2
+            ? LayoutStyles.color_style_2
+            : randomNumber === 3
+            ? LayoutStyles.color_style_3
+            : randomNumber === 4
+            ? LayoutStyles.color_style_4
+            : randomNumber === 5
+            ? LayoutStyles.color_style_5
+            : randomNumber === 6
+            ? LayoutStyles.color_style_6
+            : randomNumber === 7
+            ? LayoutStyles.color_style_7
+            : randomNumber === 8
+            ? LayoutStyles.color_style_8
+            : ''
+        }   `}
+      >
         <div
           className={`container-fluid ${LayoutStyles.no_margin} ${LayoutStyles.height_100_percent}`}
         >
