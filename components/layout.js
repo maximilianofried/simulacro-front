@@ -57,7 +57,9 @@ const Layout = ({
                       href="/"
                       className={`${LayoutStyles.no_padding} ${LayoutStyles.main_title}`}
                     >
-                      <div className={`${LayoutStyles.main_title}`}>
+                      <div
+                        className={`${LayoutStyles.main_title} ${LayoutStyles.font_title}`}
+                      >
                         Simulacro
                       </div>
                     </Link>
