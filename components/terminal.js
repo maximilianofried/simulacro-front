@@ -44,7 +44,10 @@ const Terminal = ({ content, contentList, type, id }) => {
                 return (
                   <li key={item.id}>
                     <Link href={`/${id}/${item.slug}`}>
-                      <a>{item.name}</a>
+                      <>
+                        {'> '}
+                        <a>{item.name}</a>
+                      </>
                     </Link>
                   </li>
                 )
