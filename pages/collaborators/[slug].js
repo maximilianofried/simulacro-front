@@ -40,6 +40,6 @@ export async function getStaticPaths() {
     paths: collaborators.map(
       collaborators => `/collaborators/${collaborators.slug}`
     ),
-    fallback: true,
+    fallback: false,
   }
 }
