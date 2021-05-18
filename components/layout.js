@@ -89,11 +89,12 @@ const Layout = ({
                       href="/"
                       className={`${LayoutStyles.no_padding} ${LayoutStyles.main_title}`}
                     >
-                      <div
+                      <a
                         className={`${LayoutStyles.main_title} ${LayoutStyles.font_title}`}
                       >
-                        <a>Simulacro</a>
-                      </div>
+                        {' '}
+                        Simulacro
+                      </a>
                     </Link>
                   </li>
                   <li
