@@ -41,5 +41,6 @@ export async function getStaticPaths() {
       collaborators => `/collaborators/${collaborators.slug}`
     ),
     fallback: false,
+    revalidate: 1,
   }
 }
