@@ -31,7 +31,6 @@ export async function getStaticPaths() {
   const projects = await getProjects()
   return {
     paths: projects.map(projects => `/projects/${projects.slug}`),
-    fallback: false,
-    revalidate: 1,
+    fallback: true,
   }
 }
