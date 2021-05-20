@@ -9,7 +9,6 @@ const replaceContent = content => {
 }
 
 const Terminal = ({ content, contentList, type, id }) => {
-  console.log('--->', contentList)
   return (
     <>
       {content && type === 'info' ? (
