@@ -176,6 +176,73 @@
 
 .font_title {
   font-size: 1.2rem;
+  &:hover {
+    color: #212121;
+    background-color: d1d1d1 !important;
+  }
+}
+
+.color_animation_0 {
+  &:hover {
+    color: #212121;
+    background-color: aqua !important;
+  }
+}
+
+.color_animation_1 {
+  &:hover {
+    color: #ff0000;
+    background-color: #672a8a !important;
+  }
+}
+
+.color_animation_2 {
+  &:hover {
+    color: #212121;
+    background-color: #d1d1d1 !important;
+  }
+}
+
+.color_animation_3 {
+  &:hover {
+    color: #ff0000;
+    background-color: #5e237c !important;
+  }
+}
+
+.color_animation_4 {
+  &:hover {
+    color: #0038ff;
+    background-color: #ffffff !important;
+  }
+}
+
+.color_animation_5 {
+  &:hover {
+    color: #668ab3;
+    background-color: #d1d1d1 !important;
+  }
+}
+
+.color_animation_6 {
+  &:hover {
+    color: #212121;
+    background-color: #d1d1d1 !important;
+  }
+}
+
+.color_animation_7 {
+  &:hover {
+    color: #ffffff;
+    background-color: #d1d1d1 !important;
+  }
+}
+
+.color_animation_8 {
+  &:hover {
+    color: #ffffff;
+    background-color: #000000 !important;
+  }
 }
 
 .link_decoration {
@@ -203,6 +270,20 @@
   }
 }
 
+.square {
+  background-color: #ff0000;
+  width: 1.2vh;
+  height: 1.2vh;
+  float: left;
+  padding: 2.95vh;
+  margin-right: 3vh;
+}
+
+.li_alignment {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .color_style_0 {
   background-color: #212121;
   background-image: url('/grid_group-11.svg');

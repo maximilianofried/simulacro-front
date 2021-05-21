@@ -1,6 +1,7 @@
+import { useState } from 'react'
+import Link from 'next/link'
 import Head from 'next/head'
 import Terminal from './terminal'
-import Link from 'next/link'
 import ImagesLayout from './imagesLayout'
 import LayoutStyles from '../assets/scss/Layout.module.scss'
 
@@ -21,7 +22,7 @@ const Layout = ({
   contentList,
   youtubeLinks,
 }) => {
-  let randomNumber = getRandomIntInclusive(0, 8)
+  const [randomNumber, setRandomNumber] = useState(0)
   return (
     <>
       <Head>
@@ -83,14 +84,41 @@ const Layout = ({
                   className={`align-self-baseline ${LayoutStyles.list} ${LayoutStyles.no_padding}`}
                 >
                   <li
-                    className={`${LayoutStyles.padding_5vh} ${LayoutStyles.no_bullet}`}
+                    className={`${LayoutStyles.padding_5vh} ${LayoutStyles.no_bullet} ${LayoutStyles.li_alignment}`}
                   >
+                    {' '}
+                    {/* <div className={LayoutStyles.square}></div> */}
                     <Link
                       href="/"
                       className={`${LayoutStyles.no_padding} ${LayoutStyles.main_title}`}
                     >
                       <a
-                        className={`${LayoutStyles.main_title} ${LayoutStyles.font_title}`}
+                        className={`${LayoutStyles.main_title} ${
+                          LayoutStyles.font_title
+                        } ${
+                          randomNumber === 0
+                            ? LayoutStyles.color_animation_0
+                            : randomNumber === 1
+                            ? LayoutStyles.color_animation_1
+                            : randomNumber === 2
+                            ? LayoutStyles.color_animation_2
+                            : randomNumber === 3
+                            ? LayoutStyles.color_animation_3
+                            : randomNumber === 4
+                            ? LayoutStyles.color_animation_4
+                            : randomNumber === 5
+                            ? LayoutStyles.color_animation_5
+                            : randomNumber === 6
+                            ? LayoutStyles.color_animation_6
+                            : randomNumber === 7
+                            ? LayoutStyles.color_animation_7
+                            : randomNumber === 8
+                            ? LayoutStyles.color_animation_8
+                            : ''
+                        } `}
+                        onClick={() =>
+                          setRandomNumber(getRandomIntInclusive(0, 8))
+                        }
                       >
                         {' '}
                         Simulacro
