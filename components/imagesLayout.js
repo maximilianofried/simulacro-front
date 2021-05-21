@@ -13,7 +13,7 @@ const ImagesLayout = ({ images, youtubeLinks }) => {
       <div className={`row ${Images.images_row}`}>
         <div className="col-xl-12 col-md-8 col-sm-12 col-12 ">
           {images.map(image => {
-            let url = image.format ? image.formats.medium.url : image.url
+            let url = image.formats ? image.formats.medium.url : image.url
             return (
               <img
                 className={`${Images.image_padding}`}
