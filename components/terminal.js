@@ -18,6 +18,7 @@ const Terminal = ({ content, contentList, type, id }) => {
               __html: replaceContent(content ? content : ''),
             }}
           />
+          <p className={ContentLayout.capitalize}> {id}: </p>
           <ul>
             {contentList &&
               contentList.map(item => {
