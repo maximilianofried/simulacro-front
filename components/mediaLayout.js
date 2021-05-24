@@ -26,6 +26,7 @@ const MediaLayout = ({ images, youtubeLinks, videos, mixcloudLinks }) => {
                   muted
                   plays-inline
                   loop
+                  allowFullScreen="false"
                 ></video>
               )
             })}
@@ -61,7 +62,7 @@ const MediaLayout = ({ images, youtubeLinks, videos, mixcloudLinks }) => {
                   src={youtubeLink.url}
                   frameBorder="0"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
+                  allowFullScreen="false"
                 ></iframe>
               )
             })}
