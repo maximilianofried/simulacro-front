@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import Terminal from './terminal'
-import ImagesLayout from './imagesLayout'
+import MediaLayout from './mediaLayout'
 import LayoutStyles from '../assets/scss/Layout.module.scss'
 
 const getRandomIntInclusive = (min, max) => {
@@ -19,6 +19,7 @@ const Layout = ({
   type,
   id,
   images,
+  videos,
   contentList,
   youtubeLinks,
 }) => {
@@ -147,7 +148,11 @@ const Layout = ({
               className={`row ${LayoutStyles.second_row} ${LayoutStyles.no_margin} ${LayoutStyles.no_padding} ${LayoutStyles.hide_scrollbar}`}
             >
               {images && (
-                <ImagesLayout images={images} youtubeLinks={youtubeLinks} />
+                <MediaLayout
+                  images={images}
+                  youtubeLinks={youtubeLinks}
+                  videos={videos}
+                />
               )}
             </div>
             {/* <div

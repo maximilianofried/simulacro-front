@@ -19,6 +19,7 @@ export default function Projects({ project, projects, collaborators }) {
       content={project.content}
       contentList={project.collaborators}
       images={project.images}
+      videos={project.videos}
       youtubeLinks={project.links}
       collaborators={collaborators}
       id="collaborators"

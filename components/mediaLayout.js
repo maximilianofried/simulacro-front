@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Images from '../assets/scss/Images.module.scss'
 import ReactPlayer from 'react-player'
 
-const ImagesLayout = ({ images, youtubeLinks }) => {
+const MediaLayout = ({ images, youtubeLinks, videos }) => {
   const divStyle = {
     color: 'blue',
   }
@@ -12,6 +12,22 @@ const ImagesLayout = ({ images, youtubeLinks }) => {
     <>
       <div className={`row ${Images.images_row}`}>
         <div className="col-xl-12 col-md-8 col-sm-12 col-12 ">
+          {videos &&
+            videos.map(video => {
+              return (
+                <video
+                  key={video.id}
+                  height="100%"
+                  className={`${Images.image_padding}`}
+                  src={video.url}
+                  frameBorder="0"
+                  autoPlay
+                  muted
+                  plays-inline
+                  loop
+                ></video>
+              )
+            })}
           {images.map(image => {
             let url = image.formats ? image.formats.medium.url : image.url
             return (
@@ -54,4 +70,4 @@ const ImagesLayout = ({ images, youtubeLinks }) => {
   )
 }
 
-export default ImagesLayout
+export default MediaLayout
