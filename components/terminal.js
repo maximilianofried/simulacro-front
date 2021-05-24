@@ -62,25 +62,28 @@ const Terminal = ({ content, contentList, type, id }) => {
             The default interactive simulation shell is now zsh. To update your
             reality, please run `chsh -s /bin/zsh`. npm run dev
           </p>
-          <p>
-            {'>'} portfolio-dep@1.0.0 dev /Users/simulacro/web/ {'>'} node
-            server/index.js
-          </p>
-          <p>
-            The static reality has been deprecated in favor of the enhanced
-            simulation. https://err.sh/zeit/next.js/static-dir-deprecated
-            (node:1363) ExperimentalWarning: The fs.promises API is experimental
-            Browserslist: caniuse-lite is outdated.
-          </p>
+          <p>npm run dev</p>
           <p>
             Database Connected! event - compiled successfully {'>'} Ready on
             port 3000
           </p>
           <p className={`${ContentLayout.simulacro_description}`}>
-            Simulacro Studio is a transdisciplinary studio based between Berlin
-            (DE) and Córdoba (AR) that delivers multisensorial storytelling
-            through multidisciplinary collaborations blending tech art, visual,
-            and sound.
+            Simulacro is a transdisciplinary platform that links artists,
+            technicians, performers, disciplines, and many more to deliver
+            multisensorial storytelling through multidisciplinary collaborations
+            blending tech art, visual, and sound. Originally founded by{' '}
+            <Link href="/collaborators/ignacio-bruno">
+              <a className={ContentLayout.color_black}>Ignacio Bruno</a>
+            </Link>
+            ,
+            <Link href="/collaborators/javier-rojas">
+              <a>Javier Rojas</a>
+            </Link>
+            ,and{' '}
+            <Link href="/collaborators/maximiliano-fried">
+              <a>Maximiliano Fried</a>
+            </Link>{' '}
+            the platform is based between Berlin (DE) and Córdoba (AR).
           </p>
           <p>See here for more info:</p>
           <p>hey(dot)simulacro(at)gmail(dot)com</p>
