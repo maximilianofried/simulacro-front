@@ -1,16 +1,17 @@
 import React from 'react'
 import Link from 'next/link'
-import Images from '../assets/scss/Images.module.scss'
+import Media from '../assets/scss/Media.module.scss'
 import ReactPlayer from 'react-player'
+import Vimeo from '@u-wave/react-vimeo'
 
-const MediaLayout = ({ images, youtubeLinks, videos }) => {
+const MediaLayout = ({ images, youtubeLinks, videos, mixcloudLinks }) => {
   const divStyle = {
     color: 'blue',
   }
 
   return (
     <>
-      <div className={`row ${Images.images_row}`}>
+      <div className={`row ${Media.images_row}`}>
         <div className="col-xl-12 col-md-8 col-sm-12 col-12 ">
           {videos &&
             videos.map(video => {
@@ -18,7 +19,7 @@ const MediaLayout = ({ images, youtubeLinks, videos }) => {
                 <video
                   key={video.id}
                   height="100%"
-                  className={`${Images.image_padding}`}
+                  className={`${Media.image_padding}`}
                   src={video.url}
                   frameBorder="0"
                   autoPlay
@@ -32,7 +33,7 @@ const MediaLayout = ({ images, youtubeLinks, videos }) => {
             let url = image.formats ? image.formats.medium.url : image.url
             return (
               <img
-                className={`${Images.image_padding}`}
+                className={`${Media.image_padding}`}
                 key={image.id}
                 src={url}
               ></img>
@@ -42,7 +43,7 @@ const MediaLayout = ({ images, youtubeLinks, videos }) => {
             width="100%"
             height="100%"
             style={divStyle}
-            className={`${Images.iframe_container} ${Images.image_padding}`}
+            className={`${Media.iframe_container} ${Media.image_padding}`}
             url="https://www.youtube.com/embed/2L4d7ZG6ze8"
             id="iframe"
             frameBorder="0"
@@ -56,11 +57,29 @@ const MediaLayout = ({ images, youtubeLinks, videos }) => {
                   key="youtubeLink.url"
                   width="100%"
                   height="100%"
-                  className={`${Images.iframe_container} ${Images.image_padding}`}
+                  className={`${Media.iframe_container} ${Media.image_padding}`}
                   src={youtubeLink.url}
                   frameBorder="0"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
+                ></iframe>
+              )
+            })}
+          {/* <Vimeo
+            autoplay
+            video={'280008655'}
+            className={`${Media.iframe_container} ${Media.image_padding}`}
+          /> */}
+          {mixcloudLinks &&
+            mixcloudLinks.map(mixcloudLink => {
+              return (
+                <iframe
+                  key={mixcloudLink.id}
+                  width="50%"
+                  height="100%"
+                  className={`${Media.iframe_mixcloud} `}
+                  src={mixcloudLink.url}
+                  frameborder="0"
                 ></iframe>
               )
             })}

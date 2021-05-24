@@ -22,6 +22,7 @@ const Layout = ({
   videos,
   contentList,
   youtubeLinks,
+  mixcloudLinks,
 }) => {
   const [randomNumber, setRandomNumber] = useState(0)
   return (
@@ -152,6 +153,7 @@ const Layout = ({
                   images={images}
                   youtubeLinks={youtubeLinks}
                   videos={videos}
+                  mixcloudLinks={mixcloudLinks}
                 />
               )}
             </div>
