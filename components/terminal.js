@@ -128,7 +128,7 @@ const Terminal = ({ content, contentList, type, id }) => {
           </p>
           <p>
             <a href="https://www.instagram.com/simulacro.xyz/" target="_blank">
-              (at)simulacro._
+              (at)simulacro.xyz
             </a>
           </p>{' '}
         </>

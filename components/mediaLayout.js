@@ -24,7 +24,6 @@ const MediaLayout = ({ images, youtubeLinks, videos, mixcloudLinks }) => {
                   frameBorder="0"
                   autoPlay
                   muted
-                  plays-inline
                   loop
                   allowFullScreen="false"
                 ></video>
