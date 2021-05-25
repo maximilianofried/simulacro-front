@@ -26,6 +26,7 @@ const MediaLayout = ({ images, youtubeLinks, videos, mixcloudLinks }) => {
                   muted
                   loop
                   allowFullScreen="false"
+                  playsInline
                 ></video>
               )
             })}
