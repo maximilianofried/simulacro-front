@@ -1,16 +1,22 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
 import Terminal from './terminal'
 import MediaLayout from './mediaLayout'
 import LayoutStyles from '../assets/scss/Layout.module.scss'
+import Cookie from 'js-cookie'
 
 const getRandomIntInclusive = (min, max) => {
+  console.log('getRandomTriggered')
   min = Math.ceil(min)
   max = Math.floor(max)
   return Math.floor(Math.random() * (max - min + 1) + min) //The maximum is inclusive and the minimum is inclusive
 }
 
+const updateColor = setRandomNumber => {
+  if (setRandomNumber) return setRandomNumber(getRandomIntInclusive(0, 8))
+  else return null
+}
 const Layout = ({
   children,
   collaborators,
@@ -23,8 +29,9 @@ const Layout = ({
   contentList,
   youtubeLinks,
   mixcloudLinks,
+  randomNumber,
+  setRandomNumber,
 }) => {
-  const [randomNumber, setRandomNumber] = useState(0)
   return (
     <>
       <Head>
@@ -116,9 +123,9 @@ const Layout = ({
                             ? LayoutStyles.color_animation_8
                             : ''
                         } `}
-                        onClick={() =>
-                          setRandomNumber(getRandomIntInclusive(0, 8))
-                        }
+                        onClick={() => {
+                          updateColor(setRandomNumber)
+                        }}
                       >
                         {' '}
                         Simulacro
