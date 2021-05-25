@@ -12,7 +12,9 @@ export async function getInitialProps({ req }) {
 }
 
 const App = ({ Component, pageProps, initalRandomValue }) => {
-  const [randomNumber, setRandomNumber] = useState(initalRandomValue)
+  const [randomNumber, setRandomNumber] = useState(
+    initalRandomValue ? initalRandomValue : 0
+  )
 
   useEffect(() => {
     Cookie.set('randomNumber', randomNumber)

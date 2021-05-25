@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react'
 import Moment from 'react-moment'
 import { getProject, getProjects, getCollaborators } from '../../lib/api'
 import Layout from '../../components/layout'
@@ -12,7 +13,12 @@ export async function getStaticProps() {
   }
 }
 
-export default function Projects({ project, projects, randomNumber }) {
+export default function Projects({
+  project,
+  projects,
+  randomNumber,
+  setRandomNumber,
+}) {
   return (
     <Layout
       // projects={projects}

@@ -5,13 +5,7 @@ import Terminal from './terminal'
 import MediaLayout from './mediaLayout'
 import LayoutStyles from '../assets/scss/Layout.module.scss'
 import Cookie from 'js-cookie'
-
-const getRandomIntInclusive = (min, max) => {
-  console.log('getRandomTriggered')
-  min = Math.ceil(min)
-  max = Math.floor(max)
-  return Math.floor(Math.random() * (max - min + 1) + min) //The maximum is inclusive and the minimum is inclusive
-}
+import { getRandomIntInclusive } from '../lib/helper'
 
 const updateColor = setRandomNumber => {
   if (setRandomNumber) return setRandomNumber(getRandomIntInclusive(0, 8))
