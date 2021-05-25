@@ -1,5 +1,5 @@
 .images_row {
-  margin-left: 89vw;
+  margin-left: 56vw;
   height: 60vh;
 }
 
@@ -13,9 +13,17 @@
   -ms-overflow-style: none;
 }
 
-.image_padding {
-  margin-right: 2vw;
+.image_style {
+  margin-right: 4vw;
   box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25);
+  width: auto;
+  max-height: 60vh;
+  min-height: 60vh;
+}
+
+.dots_style {
+  margin-right: 7vw;
+  // box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25);
   width: auto;
   max-height: 60vh;
   min-height: 60vh;
