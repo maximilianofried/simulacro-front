@@ -31,7 +31,10 @@ const MediaLayout = ({ images, youtubeLinks, videos, mixcloudLinks }) => {
               )
             })}
           {images.map(image => {
-            let url = image.formats ? image.formats.medium.url : image.url
+            let url =
+              image.formats && image.formats.medium
+                ? image.formats.medium.url
+                : image.url
             return (
               <img
                 className={`${Media.image_padding}`}
