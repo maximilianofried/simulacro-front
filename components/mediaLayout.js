@@ -15,7 +15,9 @@ const MediaLayout = ({ images, youtubeLinks, videos, mixcloudLinks }) => {
         <div className="col-xl-12 col-md-8 col-sm-12 col-12 ">
           <img
             src="https://res.cloudinary.com/hr3oe8cre/image/upload/v1621933067/dots2_6199d03242.gif"
-            className={`${Media.dots_style}`}
+            className={`${
+              images.length > 0 ? Media.dots_style_for_images : Media.dots_style
+            }`}
           />
           {videos &&
             videos.map(video => {
