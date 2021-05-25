@@ -6,12 +6,17 @@
   background-color: rgb(51 255 0 / 100%);
   padding: 1vh;
   color: black;
-  line-height: normal;
+  line-height: normal !important;
   a {
     color: black !important;
+    line-height: normal !important;
   }
 }
 
 .capitalize {
   text-transform: capitalize;
+}
+
+.separator {
+  width: 7vw;
 }
