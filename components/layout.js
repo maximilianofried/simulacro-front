@@ -69,7 +69,9 @@ const Layout = ({
               <div
                 className={`col-12 col-xl-6 ${LayoutStyles.r1_first_column}`}
               >
-                <div className={`${LayoutStyles.scroll_box}`}>
+                <div
+                  className={`${LayoutStyles.scroll_box} ${LayoutStyles.hide_scrollbar}`}
+                >
                   <Terminal
                     content={content}
                     contentList={contentList}
