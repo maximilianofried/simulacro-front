@@ -12,7 +12,13 @@ export async function getStaticProps({ params }) {
   }
 }
 
-export default function Projects({ project, projects, collaborators }) {
+export default function Projects({
+  project,
+  projects,
+  collaborators,
+  setRandomNumber,
+  randomNumber,
+}) {
   return (
     <Layout
       projects={projects}
@@ -25,6 +31,8 @@ export default function Projects({ project, projects, collaborators }) {
       collaborators={collaborators}
       id="collaborators"
       type="info"
+      setRandomNumber={setRandomNumber}
+      randomNumber={randomNumber}
     ></Layout>
   )
 }

@@ -12,13 +12,14 @@ export async function getStaticProps() {
   }
 }
 
-export default function Projects({ project, projects }) {
+export default function Projects({ project, projects, randomNumber }) {
   return (
     <Layout
       // projects={projects}
       content={projects}
       type="list"
       id="projects"
+      randomNumber={randomNumber}
       // collaborators={collaborators}
     ></Layout>
   )

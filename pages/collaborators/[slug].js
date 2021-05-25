@@ -18,6 +18,8 @@ export default function Collaborators({
   collaborator,
   collaborators,
   projects,
+  setRandomNumber,
+  randomNumber,
 }) {
   return (
     <Layout
@@ -27,6 +29,8 @@ export default function Collaborators({
       projects={projects}
       type="info"
       id="projects"
+      setRandomNumber={setRandomNumber}
+      randomNumber={randomNumber}
     ></Layout>
     //   <p>
     //   <Moment format="MMM Do YYYY">{article.published_at}</Moment>
