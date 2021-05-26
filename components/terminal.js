@@ -1,6 +1,11 @@
 import React from 'react'
 import Link from 'next/link'
 import ContentLayout from '../assets/scss/Content.module.scss'
+import dynamic from 'next/dynamic'
+
+const ReactTooltip = dynamic(() => import('react-tooltip'), {
+  ssr: false,
+})
 
 const replaceContent = content => {
   let newContent = content.replace(/href/g, "target='_blank' href")
@@ -31,7 +36,6 @@ const Terminal = ({ content, contentList, type, id }) => {
                 return (
                   <li key={item.id}>
                     <>
-                      {' '}
                       {'> '}
                       <Link href={`/${id}/${item.slug}`}>
                         <a>{item.name}</a>
@@ -47,14 +51,24 @@ const Terminal = ({ content, contentList, type, id }) => {
           {id === 'projects' && (
             <ul>
               {content.map(item => {
+                let tags = item.tags
+
                 return (
                   <li key={item.id}>
                     <>
                       {'> '}{' '}
                       <Link href={`/${id}/${item.slug}`}>
-                        <a>{item.name}</a>
+                        <a data-tip={tags.map(tag => tag.name)}> {item.name}</a>
                       </Link>
                     </>
+                    <ReactTooltip
+                      place="right"
+                      effect="solid"
+                      textColor="#000000"
+                      backgroundColor="#00FF00"
+                      arrowColor="transparent"
+                      className={`${ContentLayout.tooltip}`}
+                    />
                   </li>
                 )
               })}

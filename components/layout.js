@@ -133,12 +133,18 @@ const Layout = ({
                   >
                     {' '}
                     <Link href="/projects">
-                      <a className={` ${LayoutStyles.main_title}`}>Projects</a>
+                      <a
+                        className={` ${LayoutStyles.main_title} ${LayoutStyles.secondary_button}`}
+                      >
+                        Projects
+                      </a>
                     </Link>
                   </li>
                   <li className={`${LayoutStyles.no_bullet}`}>
                     <Link href="/collaborators">
-                      <a className={`${LayoutStyles.main_title}`}>
+                      <a
+                        className={`${LayoutStyles.main_title} ${LayoutStyles.secondary_button}`}
+                      >
                         Collaborators
                       </a>
                     </Link>

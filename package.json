@@ -19,6 +19,7 @@
     "react-markdown": "^4.2.2",
     "react-moment": "^0.9.6",
     "react-player": "^2.9.0",
+    "react-tooltip": "^4.2.19",
     "sass": "^1.32.13"
   },
   "license": "MIT"
