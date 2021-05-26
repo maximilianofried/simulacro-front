@@ -15,6 +15,7 @@ const Layout = ({
   children,
   collaborators,
   content,
+  tags,
   projects,
   type,
   id,
@@ -75,6 +76,7 @@ const Layout = ({
                   <Terminal
                     content={content}
                     contentList={contentList}
+                    tags={tags}
                     type={type}
                     id={id}
                   />

@@ -13,7 +13,8 @@ const replaceContent = content => {
   return newContent
 }
 
-const Terminal = ({ content, contentList, type, id }) => {
+const Terminal = ({ content, contentList, type, id, tags }) => {
+  console.log('tags', tags)
   let mainCollabs,
     otherCollabs = []
   if (type === 'list' && id === 'collaborators') {
@@ -29,6 +30,21 @@ const Terminal = ({ content, contentList, type, id }) => {
               __html: replaceContent(content ? content : ''),
             }}
           />
+          <br />
+          {tags && (
+            <p>
+              {tags.map(tag => {
+                return (
+                  <>
+                    {' '}
+                    {'#'}
+                    {tag.name}
+                  </>
+                )
+              })}
+            </p>
+          )}
+          <br />
           <p className={ContentLayout.capitalize}> {id}: </p>
           <ul>
             {contentList &&

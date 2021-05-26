@@ -24,6 +24,7 @@ export default function Projects({
       projects={projects}
       content={project.content}
       contentList={project.collaborators}
+      tags={project.tags}
       images={project.images}
       videos={project.videos}
       youtubeLinks={project.youtube}
