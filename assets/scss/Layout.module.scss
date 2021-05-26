@@ -361,3 +361,17 @@
     color: #000000;
   }
 }
+
+.tooltip_title {
+  // padding: 0 0 !important;
+  background-color: #33ff00;
+  color: black;
+  line-height: normal !important;
+  border-style: none !important;
+  border-radius: 0 !important;
+  padding: 1vh !important;
+  z-index: 999999999 !important;
+  overflow: hidden !important ;
+  font-size: 1.2rem !important;
+  line-height: 4vh !important;
+}

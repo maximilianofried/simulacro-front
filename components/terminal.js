@@ -14,7 +14,6 @@ const replaceContent = content => {
 }
 
 const Terminal = ({ content, contentList, type, id, tags }) => {
-  console.log('tags', tags)
   let mainCollabs,
     otherCollabs = []
   if (type === 'list' && id === 'collaborators') {
@@ -74,10 +73,17 @@ const Terminal = ({ content, contentList, type, id, tags }) => {
                     <>
                       {'> '}{' '}
                       <Link href={`/${id}/${item.slug}`}>
-                        <a data-tip={tags.map(tag => tag.name)}> {item.name}</a>
+                        <a
+                          data-for="projectsTooltip"
+                          data-tip={tags.map(tag => tag.name)}
+                        >
+                          {' '}
+                          {item.name}
+                        </a>
                       </Link>
                     </>
                     <ReactTooltip
+                      id="projectsTooltip"
                       place="right"
                       effect="solid"
                       textColor="#000000"

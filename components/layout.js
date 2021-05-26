@@ -6,7 +6,11 @@ import MediaLayout from './mediaLayout'
 import LayoutStyles from '../assets/scss/Layout.module.scss'
 import Cookie from 'js-cookie'
 import { getRandomIntInclusive } from '../lib/helper'
+import dynamic from 'next/dynamic'
 
+const ReactTooltip = dynamic(() => import('react-tooltip'), {
+  ssr: false,
+})
 const updateColor = setRandomNumber => {
   if (setRandomNumber) return setRandomNumber(getRandomIntInclusive(0, 8))
   else return null
@@ -98,6 +102,8 @@ const Layout = ({
                       className={`${LayoutStyles.no_padding} ${LayoutStyles.main_title}`}
                     >
                       <a
+                        data-tip="hey"
+                        data-for="titleTooltip"
                         className={`${LayoutStyles.main_title} ${
                           LayoutStyles.font_title
                         } ${
@@ -129,6 +135,15 @@ const Layout = ({
                         Simulacro
                       </a>
                     </Link>
+                    <ReactTooltip
+                      id="titleTooltip"
+                      place="left"
+                      effect="solid"
+                      textColor="#000000"
+                      backgroundColor="#00FF00"
+                      arrowColor="transparent"
+                      className={`${LayoutStyles.tooltip_title}`}
+                    />
                   </li>
                   <li
                     className={`${LayoutStyles.padding_2vh} ${LayoutStyles.no_bullet}`}
