@@ -62,6 +62,12 @@ const Terminal = ({ content, contentList, type, id }) => {
           )}
           {id === 'collaborators' && (
             <>
+              <p className={`${ContentLayout.simulacro_description}`}>
+                Our signature experiences are no one-fits-all; likewise, the
+                creative force we put behind them. Every project recruits the
+                best-in-class transdisciplinary team, and this section reveals
+                the co-creators behind our productions so far.{' '}
+              </p>
               <ul>
                 {mainCollabs.map(item => {
                   return (
@@ -96,11 +102,6 @@ const Terminal = ({ content, contentList, type, id }) => {
         </>
       ) : (
         <>
-          {' '}
-          <p>
-            Database Connected! event - compiled successfully {'>'} Ready on
-            port 3000
-          </p>
           <p className={`${ContentLayout.simulacro_description}`}>
             Founded in 2019 by{' '}
             <Link href="/collaborators/ignacio-bruno">
@@ -115,11 +116,16 @@ const Terminal = ({ content, contentList, type, id }) => {
               <a>Maximiliano Fried</a>
             </Link>
             , Simulacro is a transdisciplinary platform based between Berlin
-            (DE) and Córdoba (AR). We design and bring to life multisensorial
-            storytelling from blending tech, art, visual and sound through the
-            co-creation of artists, technicians, and performers.
+            (DE) and Córdoba (AR). Our signature productions blend tech, art,
+            visual, and sound through the co-creation of artists, technicians,
+            and performers. We have designed and assembled multisensorial
+            experiences in Barcelona, Berlin, Córdoba, and Buenos Aires.
           </p>
-          <p>See here for more info:</p>
+          <p>
+            What we do: Spatial Audio - 3D Mapping - Aural Design - Creative
+            Coding - Experimental Events - Workshop - Research.
+          </p>
+          <p> Contact us:</p>
           <p>
             {' '}
             <a href="mailto:hey.simulacro@gmail.com">
