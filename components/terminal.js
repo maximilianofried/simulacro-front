@@ -152,14 +152,17 @@ const Terminal = ({ content, contentList, type, id, tags }) => {
               <a>Maximiliano Fried</a>
             </Link>
             , Simulacro is a transdisciplinary platform based between Berlin
-            (DE) and Córdoba (AR). Our signature productions blend tech, art,
-            visual, and sound through the co-creation of artists, technicians,
-            and performers. We have designed and assembled multisensorial
-            experiences in Barcelona, Berlin, Córdoba, and Buenos Aires.
+            (DE) and Córdoba (AR). Working closely with artists and musicians we
+            create multisensorial experiences, websites, and  experimental
+            interfaces. With a background in architecture, design, engineering,
+            software and art our practice links analogue and digital space,
+            aural and visual languages.
           </p>
           <p>
-            What we do: Spatial Audio - 3D Mapping - Aural Design - Creative
-            Coding - Experimental Events - Workshop - Research.
+            We ensure the use of high end technology to develop our projects
+            using softwares like: Node.js - React - CSS - Max MSP + Ambisonics -
+            Jitter - Touch designer - Resolume Arena - Articulate - Rhino +
+            Grasshopper.
           </p>
           <p> Contact us:</p>
           <p>
