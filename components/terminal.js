@@ -100,8 +100,8 @@ const Terminal = ({ content, contentList, type, id, tags }) => {
             <>
               <p className={`${ContentLayout.simulacro_description}`}>
                 Every project we collaborate on creates new connections that
-                make the development meaningful. This section tend to give space
-                and reveal the transdisciplinary links created behind our
+                make the development meaningful. This section tends to give
+                space and reveal the transdisciplinary links created behind our
                 productions so far.{' '}
               </p>
               <ul>
