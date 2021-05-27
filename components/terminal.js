@@ -99,10 +99,10 @@ const Terminal = ({ content, contentList, type, id, tags }) => {
           {id === 'collaborators' && (
             <>
               <p className={`${ContentLayout.simulacro_description}`}>
-                Our signature experiences are no one-fits-all; likewise, the
-                creative force we put behind them. Every project recruits the
-                best-in-class transdisciplinary team, and this section reveals
-                the co-creators behind our productions so far.{' '}
+                Every project we collaborate on creates new connections that
+                make the development meaningful. This section tend to give space
+                and reveal the transdisciplinary links created behind our
+                productions so far.{' '}
               </p>
               <ul>
                 {mainCollabs.map(item => {
