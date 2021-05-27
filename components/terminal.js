@@ -153,7 +153,7 @@ const Terminal = ({ content, contentList, type, id, tags }) => {
             </Link>
             , Simulacro is a transdisciplinary platform based between Berlin
             (DE) and Córdoba (AR). Working closely with artists and musicians we
-            create multisensorial experiences, websites, and  experimental
+            create multisensorial experiences, websites, and experimental
             interfaces. With a background in architecture, design, engineering,
             software and art our practice links analogue and digital space,
             aural and visual languages.
