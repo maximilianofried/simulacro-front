@@ -30,6 +30,7 @@ const Layout = ({
   mixcloudLinks,
   randomNumber,
   setRandomNumber,
+  brickGothicPost,
 }) => {
   return (
     <>
@@ -170,7 +171,11 @@ const Layout = ({
               </div>
             </div>
             <div
-              className={`row ${LayoutStyles.second_row} ${LayoutStyles.no_margin} ${LayoutStyles.no_padding} ${LayoutStyles.hide_scrollbar}`}
+              className={`row ${LayoutStyles.second_row} ${
+                LayoutStyles.no_margin
+              } ${LayoutStyles.no_padding} ${LayoutStyles.hide_scrollbar} ${
+                brickGothicPost ? LayoutStyles.brick_gothic : ''
+              }`}
             >
               {images && (
                 <MediaLayout

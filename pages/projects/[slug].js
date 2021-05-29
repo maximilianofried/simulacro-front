@@ -34,6 +34,7 @@ export default function Projects({
       type="info"
       setRandomNumber={setRandomNumber}
       randomNumber={randomNumber}
+      brickGothicPost={project.slug === 'brick-gothic' ? true : false}
     ></Layout>
   )
 }
