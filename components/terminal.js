@@ -99,10 +99,11 @@ const Terminal = ({ content, contentList, type, id, tags }) => {
           {id === 'collaborators' && (
             <>
               <p className={`${ContentLayout.simulacro_description}`}>
-                Every project we collaborate on creates new connections that
-                make the development meaningful. This section tends to give
-                space and reveal the transdisciplinary links created behind our
-                productions so far.{' '}
+                We aim to build a platform for meaningful and long-term
+                exchange. Over the past years, we were able to work with many
+                inspiring people on several projects. Here we give space to our
+                collaborators to interconnect the Simulacro platform with their
+                external network.
               </p>
               <ul>
                 {mainCollabs.map(item => {
@@ -159,10 +160,9 @@ const Terminal = ({ content, contentList, type, id, tags }) => {
             aural and visual languages.
           </p>
           <p>
-            We ensure the use of high end technology to develop our projects
-            using softwares like: Node.js - React - CSS - Max MSP + Ambisonics -
-            Jitter - Touch designer - Resolume Arena - Articulate - Rhino +
-            Grasshopper.
+            We use software technologies like: Javascript - Python - C++ - Max
+            MSP + Ambisonics - Jitter - Touch designer - Resolume Arena -
+            Articulate - Rhino + Grasshopper.
           </p>
           <p> Contact us:</p>
           <p>
