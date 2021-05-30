@@ -73,7 +73,9 @@ const Layout = ({
               className={`row ${LayoutStyles.first_row} ${LayoutStyles.no_margin} `}
             >
               <div
-                className={`col-12 col-xl-6 ${LayoutStyles.r1_first_column}`}
+                className={`col-12 col-xl-6 ${
+                  brickGothicPost ? LayoutStyles.brick_gothic_terminal : ''
+                }`}
               >
                 <div
                   className={`${LayoutStyles.scroll_box} ${LayoutStyles.hide_scrollbar}`}
@@ -91,7 +93,7 @@ const Layout = ({
                 className={`col-12 col-xl-6 ${LayoutStyles.title_simulacro} ${LayoutStyles.no_padding}`}
               >
                 <ul
-                  className={`align-self-baseline ${LayoutStyles.list} ${LayoutStyles.no_padding}`}
+                  className={`align-self-baseline ${LayoutStyles.list} ${LayoutStyles.no_padding} `}
                 >
                   <li
                     className={`${LayoutStyles.padding_5vh} ${LayoutStyles.no_bullet} ${LayoutStyles.li_alignment}`}
@@ -174,7 +176,7 @@ const Layout = ({
               className={`row ${LayoutStyles.second_row} ${
                 LayoutStyles.no_margin
               } ${LayoutStyles.no_padding} ${LayoutStyles.hide_scrollbar} ${
-                brickGothicPost ? LayoutStyles.brick_gothic : ''
+                brickGothicPost ? LayoutStyles.brick_gothic_media : ''
               }`}
             >
               {images && (

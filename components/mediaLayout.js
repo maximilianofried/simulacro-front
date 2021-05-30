@@ -89,7 +89,7 @@ const MediaLayout = ({ images, youtubeLinks, videos, mixcloudLinks }) => {
                   height="100%"
                   className={`${Media.iframe_mixcloud} `}
                   src={mixcloudLink.url}
-                  frameborder="0"
+                  frameBorder="0"
                 ></iframe>
               )
             })}
