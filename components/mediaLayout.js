@@ -85,7 +85,7 @@ const MediaLayout = ({ images, youtubeLinks, videos, mixcloudLinks }) => {
               return (
                 <iframe
                   key={mixcloudLink.id}
-                  width="50%"
+                  width="400vw"
                   height="100%"
                   className={`${Media.iframe_mixcloud} `}
                   src={mixcloudLink.url}
