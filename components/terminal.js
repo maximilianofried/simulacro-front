@@ -139,19 +139,26 @@ const Terminal = ({ content, contentList, type, id, tags }) => {
         </>
       ) : (
         <>
-          <textarea
-            rows="8"
-            cols="70"
-            className={`${ContentLayout.simulacro_description}`}
-          >
-            Founded in 2019 by Ignacio Bruno, Javier Rojas and Maximiliano Fried
+          <p className={`${ContentLayout.simulacro_description}`}>
+            Founded in 2019 by{' '}
+            <Link href="/collaborators/ignacio-bruno">
+              <a className={ContentLayout.color_black}>Ignacio Bruno</a>
+            </Link>
+            ,{' '}
+            <Link href="/collaborators/javier-rojas">
+              <a>Javier Rojas</a>
+            </Link>{' '}
+            and{' '}
+            <Link href="/collaborators/maximiliano-fried">
+              <a>Maximiliano Fried</a>
+            </Link>
             , Simulacro is a transdisciplinary platform based between Berlin
             (DE) and Córdoba (AR). Working closely with artists and musicians we
             create multisensorial experiences, websites, and experimental
             interfaces. With a background in architecture, design, engineering,
             software and art our practice links analogue and digital space,
             aural and visual languages.
-          </textarea>
+          </p>
           <p>
             We use software technologies like: Javascript - Python - C++ - Max
             MSP + Ambisonics - Jitter - Touch designer - Resolume Arena -
